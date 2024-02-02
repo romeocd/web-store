@@ -22,7 +22,7 @@ Install Express.js on the command line [express.js](https://www.npmjs.com/packag
 Install [Apollo Server Express](https://www.npmjs.com/package/apollo-server-express) and [Apollo Server](https://www.npmjs.com/package/@apollo/server) and [Graphql](https://www.npmjs.com/package/graphql)<br>
 Install [bcrypt](https://www.npmjs.com/package/bcrypt) and [jsonWebToken](https://www.npmjs.com/package/jsonwebtoken) for security and authentication<br>
 Install [Mongoose](https://www.npmjs.com/package/mongoose) for the NoSql Database<br><br>
-For the Front-End Client Install [React](https://www.npmjs.com/package/react)), [React-Bootstrap](https://www.npmjs.com/package/react-bootstrap) and [boostrap](https://www.npmjs.com/package/bootstrap) to use React<br>
+For the Front-End Client Install [React](https://www.npmjs.com/package/react), [React-Bootstrap](https://www.npmjs.com/package/react-bootstrap) and [boostrap](https://www.npmjs.com/package/bootstrap) to use React<br>
 Install [Apollo Client](https://www.npmjs.com/package/@apollo/client) and [Apollo React Hooks](https://www.npmjs.com/package/@apollo/react-hooks)
 
 
