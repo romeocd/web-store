@@ -1,5 +1,5 @@
 
-# Note Taker - Express.js
+# Web Store MERN STACK
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
