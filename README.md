@@ -16,7 +16,6 @@
 
 
 ## Installations
-The links to the requirements are highlighted<br>
 The links to the requirements are highlighted<br><br>
 For the Server Install [node.js](https://nodejs.org/en) to run this application<br>
 Install Express.js on the command line [express.js](https://www.npmjs.com/package/)<br>
