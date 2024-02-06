@@ -1,14 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'  Don't need these 3 main and app should still show the <h1>
+import { Outlet } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import Nav from '.components/Nav';
+import { StoreProvider } from './utils/GlobalState';
+
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
+    <ApolloProvider client={client}>
+      {/* <StoreProvider> */}
+        {/* <Nav /> */}
+        <Outlet />
+      {/* </StoreProvider> */}
+    </ApolloProvider>
+  );
+}
+
+export default App
+
+      {/* THE generic vite for testing <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,9 +59,5 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      </p> */}
 
-export default App
