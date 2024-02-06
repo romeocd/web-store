@@ -5,7 +5,7 @@ const typeDefs = gql`
         _id: ID
         name: String
     }
-    type Product{
+    type Product {
         _id: ID 
         name: String
         description: String
@@ -13,8 +13,9 @@ const typeDefs = gql`
         quantity: Int
         price: Float
         category: Category   
-     }
-     type Order{
+    }
+
+     type Order {
         _id: ID
         purchaseDate: String
         products: [Product]
@@ -25,7 +26,7 @@ const typeDefs = gql`
         username: String
         email : String
         orders: [Order]
-
+    }
     type Checkout {
         session: ID
     }

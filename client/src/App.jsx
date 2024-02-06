@@ -1,6 +1,6 @@
 // import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'  Don't need these 3 main and app should still show the <h1s> in the pages
+// import viteLogo from '/vite.svg' Don't need these 3 main and app should still show the <h1s> in the pages
+import './App.css'
 import { Outlet } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
