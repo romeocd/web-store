@@ -19,49 +19,49 @@ db.once('open', async () => {
 
     const products = await Product.insertMany([
         {
-            name:'Bengals Jersey',
-            description:'Showcase your team spirit with this authentic Joe Bengals jersey, perfect for game day or casual wear.',
-            image:'',
+            name:'Joe Burrow Bengals Jersey',
+            description:'Showcase your team spirit with this authentic Joe Burrow Bengals jersey, perfect for game day or casual wear.',
+            image:'joe-burrow-jersey.jpg',
             category: categories[0]._id,
-            price: 100.00,
+            price: 174.99,
             quantity: 1
         },
         {
-            name:'Nike Hoodie',
-            description:'Stay cozy and stylish in this light blue Nike hoodie, featuring soft fabric and a classic design for everyday comfort.',
-            image:'',
+            name:'NIKE Sportswear Mens Pullover Club Hoodie',
+            description:'Size Large. Stay cozy and stylish in this light blue Nike hoodie, featuring soft fabric and a classic design for everyday comfort.',
+            image:'nike-hoodie.jpg',
             category: categories[0]._id,
-            price: 30.00,
+            price: 39.99,
             quantity: 1
         },
         {
-            name:'Samsung Dryer',
-            description:'Elevate your laundry routine with this energy-efficient Samsung dryer, featuring advanced technology for faster, quieter, and more precise drying.',
-            image:'',
+            name:'Shark Navigator Lift-Away Deluxe NV360',
+            description:'Experience powerful and effortless cleaning with the Shark Vacuum, designed for deep-cleaning performance on all types of floors and surfaces.',
+            image:'shark-vacuum.jpg',
             category: categories[1]._id,
-            price: 0.00,
+            price: 199.99,
             quantity: 1
         },
         {
-            name:'Swiffer Wet Jet',
+            name:'Swiffer WetJet Hardwood and Floor Spray Mop Cleaner',
             description:'Make cleaning a breeze with the Swiffer WetJet, an all-in-one mopping system that tackles tough dirt and grime effortlessly.',
-            image:'',
+            image:'swiffer-mop.jpg',
             category: categories[1]._id,
-            price: 0.00,
+            price: 20.00,
             quantity: 1
         },
         {
-            name:'Dell Monitor',
+            name:'Dell 240Hz Gaming Monitor 24.5 Inch Full HD Monitor with IPS Technology, Antiglare Screen, Dark Metallic Grey - S2522HG',
             description:'Enhance your workspace with this high-resolution Dell monitor, offering vibrant colors and crystal-clear imagery for an optimal viewing experience.',
-            image:'',
+            image:'dell-monitor.jpg',
             category: categories[2]._id,
-            price: 140.00,
+            price: 249.00,
             quantity: 1
         },
         {
-            name:'Logitech Mouse',
+            name:'Logitech M510 Mouse, Wireless Black, 910-001825 (Black)',
             description:'Experience precision and comfort with this Logitech mouse, designed for seamless navigation and optimal ergonomics.',
-            image:'',
+            image:'logitech-mouse.jpg',
             category: categories[2]._id,
             price: 0.00,
             quantity: 1
