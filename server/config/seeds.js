@@ -19,101 +19,86 @@ db.once('open', async () => {
 
     const products = await Product.insertMany([
         {
-            name:'Product 1',
-            description:'',
-            image:'',
+            name:'Joe Burrow Bengals Jersey',
+            description:'Showcase your team spirit with this authentic Joe Burrow Bengals jersey, perfect for game day or casual wear.',
+            image:'joe-burrow-jersey.jpg',
             category: categories[0]._id,
+            price: 174.99,
+            quantity: 1
+        },
+        {
+            name:'NIKE Sportswear Mens Pullover Club Hoodie',
+            description:'Size Large. Stay cozy and stylish in this light blue Nike hoodie, featuring soft fabric and a classic design for everyday comfort.',
+            image:'nike-hoodie.jpg',
+            category: categories[0]._id,
+            price: 39.99,
+            quantity: 1
+        },
+        {
+            name:'Shark Navigator Lift-Away Deluxe NV360',
+            description:'Experience powerful and effortless cleaning with the Shark Vacuum, designed for deep-cleaning performance on all types of floors and surfaces.',
+            image:'shark-vacuum.jpg',
+            category: categories[1]._id,
+            price: 199.99,
+            quantity: 1
+        },
+        {
+            name:'Swiffer WetJet Hardwood and Floor Spray Mop Cleaner',
+            description:'Make cleaning a breeze with the Swiffer WetJet, an all-in-one mopping system that tackles tough dirt and grime effortlessly.',
+            image:'swiffer-mop.jpg',
+            category: categories[1]._id,
+            price: 20.00,
+            quantity: 1
+        },
+        {
+            name:'Dell 240Hz Gaming Monitor 24.5 Inch Full HD Monitor with IPS Technology, Antiglare Screen, Dark Metallic Grey - S2522HG',
+            description:'Enhance your workspace with this high-resolution Dell monitor, offering vibrant colors and crystal-clear imagery for an optimal viewing experience.',
+            image:'dell-monitor.jpg',
+            category: categories[2]._id,
+            price: 249.00,
+            quantity: 1
+        },
+        {
+            name:'Logitech M510 Mouse, Wireless Black, 910-001825 (Black)',
+            description:'Experience precision and comfort with this Logitech mouse, designed for seamless navigation and optimal ergonomics.',
+            image:'logitech-mouse.jpg',
+            category: categories[2]._id,
             price: 0.00,
             quantity: 1
         },
         {
-            name:'Product 2',
-            description:'',
+            name:'Dog Breeds Encyclopedia',
+            description:'Dive into the world of canines with this comprehensive Dog Breeds Encyclopedia, packed with information and pictures of various breeds.',
             image:'',
-            category: categories[0]._id,
+            category: categories[3]._id,
             price: 0.00,
             quantity: 1
         },
         {
-            name:'Product 3',
-            description:'',
+            name:'Harry Potter and the Chamber of Secrets',
+            description:'Rediscover the magic in Harry Potter and the Chamber of Secrets a spellbinding tale of adventure and mystery in the beloved Harry Potter series.',
             image:'',
-            category: categories[0]._id,
+            category: categories[3]._id,
             price: 0.00,
             quantity: 1
         },
         {
-            name:'Product 4',
-            description:'',
+            name:'Star Wars LEGO ',
+            description:'Build your own galaxy adventure with this Star Wars LEGO set, a perfect blend of creativity and nostalgia for fans of all ages.',
             image:'',
-            category: categories[0]._id,
+            category: categories[4]._id,
             price: 0.00,
             quantity: 1
         },
         {
-            name:'Product 5',
-            description:'',
+            name:'Hot Wheels Camaro',
+            description:'Speed into action with this sleek Hot Wheels Camaro, a must-have for collectors and car enthusiasts alike.',
             image:'',
-            category: categories[0]._id,
+            category: categories[4]._id,
             price: 0.00,
             quantity: 1
         },
-        {
-            name:'Product 6',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        },
-        {
-            name:'Product 7',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        },
-        {
-            name:'Product 8',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        },
-        {
-            name:'Product 9',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        },
-        {
-            name:'Product 10',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        },
-        {
-            name:'Product 11',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        },
-        {
-            name:'Product 12',
-            description:'',
-            image:'',
-            category: categories[0]._id,
-            price: 0.00,
-            quantity: 1
-        }
+        
     ]);
     console.log('products seeded');
 
