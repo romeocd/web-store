@@ -10,8 +10,5 @@
 //     TOGGLE_CART,
 //   } from './actions';
 
-//   export default function reducer() {
-//     return (
-//         <h1></h1>
-//     );
+//   export default function reducer {
 // }
