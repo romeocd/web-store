@@ -63,37 +63,37 @@ db.once('open', async () => {
             description:'Experience precision and comfort with this Logitech mouse, designed for seamless navigation and optimal ergonomics.',
             image:'logitech-mouse.jpg',
             category: categories[2]._id,
-            price: 0.00,
+            price: 23.90,
             quantity: 1
         },
         {
-            name:'Dog Breeds Encyclopedia',
-            description:'Dive into the world of canines with this comprehensive Dog Breeds Encyclopedia, packed with information and pictures of various breeds.',
-            image:'',
+            name:'The Dog Encyclopedia (DK Pet Encyclopedias)',
+            description:'Dive into the world of canines with this comprehensive Dog Encyclopedia, packed with information and pictures of various breeds.',
+            image:'dog-encyclopedia.jpg',
             category: categories[3]._id,
-            price: 0.00,
+            price: 19.95,
             quantity: 1
         },
         {
             name:'Harry Potter and the Chamber of Secrets',
             description:'Rediscover the magic in Harry Potter and the Chamber of Secrets a spellbinding tale of adventure and mystery in the beloved Harry Potter series.',
-            image:'',
+            image:'harrypotter-chamber.jpg',
             category: categories[3]._id,
-            price: 0.00,
+            price: 4.99,
             quantity: 1
         },
         {
             name:'Star Wars LEGO ',
             description:'Build your own galaxy adventure with this Star Wars LEGO set, a perfect blend of creativity and nostalgia for fans of all ages.',
-            image:'',
+            image:'starwars-lego',
             category: categories[4]._id,
-            price: 0.00,
+            price: 164.95,
             quantity: 1
         },
         {
-            name:'Hot Wheels Camaro',
+            name:'Hot Wheels 1969 Chevy Camaro, Fast & Furious',
             description:'Speed into action with this sleek Hot Wheels Camaro, a must-have for collectors and car enthusiasts alike.',
-            image:'',
+            image:'hot-wheels.jpg',
             category: categories[4]._id,
             price: 0.00,
             quantity: 1
