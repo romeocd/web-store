@@ -1,3 +1,21 @@
+// import './App.css'
+
+// function App() {
+ 
+
+//   return (
+//     <>
+//     <h1>does this work? It does</h1>
+
+//     </>
+//   )
+// }
+
+// export default App
+// If you run only this and comment out the rest 
+//it will show up as does this work? it Does 
+// good starting point?
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
