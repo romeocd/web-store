@@ -133,7 +133,22 @@ const resolvers = {
             const token = signToken(user);
       
             return { token, user };
-        }
-    }
-}    
+
+        },
+        
+        addProduct: async (parent, { name, description, image, quantity, price, category }) => {
+          const newProduct = new Product({
+              name,
+              description,
+              image,
+              quantity,
+              price,
+              category
+          });
+
+          return await newProduct.save();
+      },
+  }
+};
+
 module.exports = resolvers;
