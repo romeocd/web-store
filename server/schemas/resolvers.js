@@ -169,35 +169,35 @@ const resolvers = {
 
         },
         
-        addProduct: async (parent, { name, description, image, quantity, price, category }) => {
-          //Check if the user is authenticated
+        addProduct: async (parent, { name, description, image, quantity, price, category }, context) => {
+          // Check if the user is authenticated
           if (!context.user) {
-            throw new AuthenticationError('You need to be logged in to perform this action')
+              throw new AuthenticationError('You need to be logged in to perform this action');
           }
 
-          //Find the category by name
-          let categoryObj = await Category.findOne({
-            name: category
-          });
+          // Find the category by name
+          let categoryObj = await Category.findOne({ name: category });
 
-          //If category doesn't exist, create a new one
+          // If category doesn't exist, create a new one
           if (!categoryObj) {
-            categoryObj = new Category({ name: category });
-            await categoryObj.save()
+              categoryObj = new Category({ name: category });
+              await categoryObj.save();
           }
           
+          // Create a new product with the category ID
           const newProduct = new Product({
               name,
               description,
               image,
               quantity,
               price,
-              
-              category: categoryObj.id
+              category: categoryObj._id // Use _id for MongoDB documents
           });
 
+          // Save the new product
           await newProduct.save();
 
+          // Return the newly created product
           return newProduct;
       },
   }
