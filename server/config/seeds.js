@@ -7,7 +7,7 @@ db.once('open', async () => {
     await cleanDB('Product', 'products');
     await cleanDB('User', 'users');
 
-    const categories = await Category.inserMany([
+    const categories = await Category.insertMany([
         { name: 'Clothing'},
         { name: 'Household Supplies'},
         { name: 'Electronics' },
@@ -85,7 +85,7 @@ db.once('open', async () => {
         {
             name:'Star Wars LEGO ',
             description:'Build your own galaxy adventure with this Star Wars LEGO set, a perfect blend of creativity and nostalgia for fans of all ages.',
-            image:'starwars-lego',
+            image:'starwars-lego.jpg',
             category: categories[4]._id,
             price: 164.95,
             quantity: 1
@@ -95,7 +95,7 @@ db.once('open', async () => {
             description:'Speed into action with this sleek Hot Wheels Camaro, a must-have for collectors and car enthusiasts alike.',
             image:'hot-wheels.jpg',
             category: categories[4]._id,
-            price: 0.00,
+            price: 1.00,
             quantity: 1
         },
         
