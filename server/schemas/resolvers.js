@@ -1,7 +1,8 @@
 const { User, Order, Category, Product} = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
-const stripe = require('stripe')('sk-test_4eC39HqLyjWDarjtT1zdp7dc'); // Replace with your Stripe secret API key
-
+require('dotenv').config();
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Replace with your Stripe secret API key
+console.log(process.env.STRIPE_SECRET_KEY);
 
 const resolvers = {
     Query: {
