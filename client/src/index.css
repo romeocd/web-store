@@ -113,8 +113,8 @@ button[disabled] {
 img {
   width: 200px;
   height: 200px;
-  object-fit: contain;
-  /* max-width: 100%; */
+  object-fit: contain; /* display different sized images the same */
+  
 }
 
 span[role="img"] {

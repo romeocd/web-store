@@ -1,6 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-
+// Navigation component that renders the site's navigation bar
 function Nav() {
 
   function showNavigation() {

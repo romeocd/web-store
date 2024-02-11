@@ -8,21 +8,24 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
-
+// Initialize Stripe with the public key
 const stripePromise = loadStripe('pk_test_pk_test_51OfAPQAEasXPaTc1bwWFkcoKqpSAJHXn3hATk3a6GZFyR9uGKSNluiOn5fikBE3z5SD0uPVtdQWK4weQF01LFiig00w9EUm2e9');
 
 const Cart = () => {
+  // State and dispatch from the global context
   const [state, dispatch] = useStoreContext();
+  // Lazy query hook for checkout process
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
+  // Effect for handling checkout process
   useEffect(() => {
+    // If checkout data is available, redirect to Stripe checkout
     if (data) {
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
       });
     }
   }, [data]);
-
+  // Effect for loading cart items from IndexedDB on component mount or cart length change
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -33,11 +36,11 @@ const Cart = () => {
       getCart();
     }
   }, [state.cart.length, dispatch]);
-
+  // Toggles the cart's visibility
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
   }
-
+  // Calculates the total price of items in the cart
   function calculateTotal() {
     let sum = 0;
     state.cart.forEach((item) => {
@@ -45,7 +48,7 @@ const Cart = () => {
     });
     return sum.toFixed(2);
   }
-
+  // Initiates the checkout process
   function submitCheckout() {
     getCheckout({
       variables: { 
@@ -53,7 +56,7 @@ const Cart = () => {
       },
     });
   }
-
+  // Render logic for when the cart is closed
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
@@ -63,7 +66,7 @@ const Cart = () => {
       </div>
     );
   }
-
+  // Main render for the open cart
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>

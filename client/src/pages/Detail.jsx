@@ -13,17 +13,19 @@ import {
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
-
+// Detail component to display detailed information about a single product
 function Detail() {
+  // Use global state contex
   const [state, dispatch] = useStoreContext();
+  // Local state for the current product
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
-
+  // GraphQL query to fetch products data
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
+  // Destructure products and cart from global state
   const { products, cart } = state;
-
+  // Effect hook to determine the product to display
   useEffect(() => {
     // already in global store
     if (products.length) {

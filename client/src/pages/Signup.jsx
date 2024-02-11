@@ -5,11 +5,14 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
 function Signup(props) {
+  // Local state to manage form inputs
   const [formState, setFormState] = useState({ email: '', password: '' });
+  // Apollo mutation hook for adding a new user
   const [addUser] = useMutation(ADD_USER);
-
+  // Handles form submission to create a new user account
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    // Execute the addUser mutation with variables from formState
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
@@ -18,18 +21,20 @@ function Signup(props) {
         lastName: formState.lastName,
       },
     });
+    // Extract the authentication token from the mutation response
     const token = mutationResponse.data.addUser.token;
+    // Log in the user with the received token
     Auth.login(token);
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
-      ...formState,
-      [name]: value,
+      ...formState,// Spread existing form state
+      [name]: value,// Update the changed value
     });
   };
-
+  // Render the signup form
   return (
     <div className="container my-1">
       <Link to="/login">← Go to Login</Link>
