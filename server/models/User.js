@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Order = require('./Order');
-
+// Define the schema for the user
 const userSchema = new Schema({
   firstName: {
     type: String,
@@ -26,6 +26,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
+  // Embed the Order schema to track user orders
   orders: [Order.schema]
 });
 
@@ -36,7 +37,7 @@ userSchema.pre('save', async function(next) {
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
 
-  next();
+  next(); // Proceed to the next middleware or save the document
 });
 
 // compare the incoming password with the hashed password
@@ -45,5 +46,5 @@ userSchema.methods.isCorrectPassword = async function(password) {
 };
 
 const User = mongoose.model('User', userSchema);
-
+// Compile the schema into a model and export it
 module.exports = User;
