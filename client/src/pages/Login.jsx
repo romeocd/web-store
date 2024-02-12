@@ -3,32 +3,35 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-
+// Login component handles user login functionality
 function Login(props) {
+  // Local state to manage form inputs
   const [formState, setFormState] = useState({ email: '', password: '' });
+  // GraphQL mutation hook for the login operation
   const [login, { error }] = useMutation(LOGIN);
-
+  // Handles form submission for login
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      // Attempt to execute login mutation with form state variables
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
-      const token = mutationResponse.data.login.token;
-      Auth.login(token);
+      const token = mutationResponse.data.login.token; // Extract token from response
+      Auth.login(token);// Authenticate user with token
     } catch (e) {
       console.log('error', e);
     }
   };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target;// Destructure updated input name and value
     setFormState({
-      ...formState,
-      [name]: value,
+      ...formState,// Spread existing form state
+      [name]: value,// Update changed value
     });
   };
-
+  // Render the login form
   return (
     <div className="container my-1">
       <Link to="/signup">← Go to Signup</Link>

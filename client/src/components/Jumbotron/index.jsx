@@ -1,3 +1,4 @@
+// Jumbotron component designed to display a large header or introductory content
 function Jumbotron({ children }) {
   return (
     <div
