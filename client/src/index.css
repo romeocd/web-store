@@ -1,12 +1,14 @@
 :root {
   --primary: #0B1332;
-  --secondary: #3145c5;
+  --secondary: #87CEFA; /* Changed to light blue */
   --tertiary: #013175;
   --light: #EBEBEB;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+}
+
 }
 
 * {
