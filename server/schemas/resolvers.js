@@ -1,8 +1,8 @@
 const { User, Order, Category, Product} = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 require('dotenv').config();
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Replace with your Stripe secret API key
-console.log(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 
 const resolvers = {
     Query: {
@@ -79,7 +79,7 @@ const resolvers = {
           return { session: session.id };
         },
       },
-
+      
     Mutation: {
         // Mutation to create a new user and return a token
         addUser: async (parent, args) => {
