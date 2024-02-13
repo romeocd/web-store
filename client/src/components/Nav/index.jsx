@@ -1,9 +1,12 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+
 // Navigation component that renders the site's navigation bar
 function Nav() {
 
+  // Function to conditionally render navigation links based on user authentication status
   function showNavigation() {
+    // If user is logged in, show order history and logout links
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
@@ -13,7 +16,7 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            {/* Logout link - when clicked, logs out user and refreshes the application */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
@@ -21,6 +24,7 @@ function Nav() {
         </ul>
       );
     } else {
+      // If user is not logged in, show signup and login links
       return (
         <ul className="flex-row">
           <li className="mx-1">
@@ -38,15 +42,18 @@ function Nav() {
     }
   }
 
+  // Render the navigation component
   return (
     <header className="flex-row px-1">
       <h1>
+        {/* Home link */}
         <Link to="/">
           <span role="img" aria-label="shopping bag">🛍️</span>
           Web Store
         </Link>
       </h1>
 
+      {/* Render navigation links */}
       <nav>
         {showNavigation()}
       </nav>
