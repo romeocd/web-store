@@ -1,24 +1,30 @@
+/* Define root variables for colors and spacing */
 :root {
-  --primary: #0B1332;
-  --secondary: #3145c5;
-  --tertiary: #013175;
-  --light: #EBEBEB;
-  --dark: #272f32;
-  --error: rgb(228, 46, 1);
-  --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
+  --primary: #0B1332; /* Primary color */
+  --secondary: #87CEFA; /* Secondary color (light blue) */
+  --tertiary: #013175; /* Tertiary color */
+  --light: #EBEBEB; /* Light color */
+  --dark: #272f32; /* Dark color */
+  --error: rgb(228, 46, 1); /* Error color */
+  --spacing-one: calc(1rem * 0.5); /* Spacing value 1 */
+  --spacing-two: calc(1rem); /* Spacing value 2 */
+  --text-outline-color: #000; /* Outline color for text */
+  --text-fill-color: #FFA500; /* Fill color for text (light orange) */
 }
 
+/* Global box-sizing reset */
 * {
   box-sizing: border-box;
 }
 
+/* Set background color for html and body */
 html,
 body {
   min-height: 100%;
-  background-color:#bdbcbc;
+  background-color:#bdbcbc; /* Background color */
 }
 
+/* Body styles */
 body {
   margin: 0;
   padding: 0;
@@ -26,9 +32,14 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 18px;
-  color: var(--dark);
+  color: var(--dark); /* Set text color */
+  text-shadow: -1px -1px 0 var(--text-outline-color),  
+                1px -1px 0 var(--text-outline-color),
+               -1px  1px 0 var(--text-outline-color),
+                1px  1px 0 var(--text-outline-color); /* Add black outline to text */
 }
 
+/* Heading styles */
 h1,
 h2,
 h3,
@@ -41,6 +52,7 @@ h6 {
   line-height: 1.25;
 }
 
+/* Individual heading sizes */
 h1 {
   font-size: 2.25rem;
 }
@@ -65,13 +77,16 @@ h6 {
   font-size: 1rem;
 }
 
+/* Paragraph styles */
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  color: var(--text-fill-color); /* Set text color */
 }
 
+/* Anchor styles */
 a {
-  color: var(--tertiary);
+  color: var(--tertiary); /* Set anchor color */
   text-decoration: none;
   font-weight: bold;
 }
@@ -80,14 +95,16 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Header styles */
 header {
-  background: var(--primary);
+  background: var(--primary); /* Set header background color */
 }
 
 header a {
   color: var(--light);
 }
 
+/* Button styles */
 button {
   font-size: 1rem;
   text-decoration: none;
@@ -97,7 +114,7 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: var(--secondary); /* Set button background color */
   color: #dfdede;
 }
 
@@ -110,6 +127,7 @@ button[disabled] {
   opacity: .8;
 }
 
+/* Image styles */
 img {
   width: 200px;
   height: 200px;
@@ -117,14 +135,17 @@ img {
   
 }
 
+/* Span styles */
 span[role="img"] {
   cursor: default;
 }
 
+/* Form styles */
 form {
   width: 40%;
 }
 
+/* Input styles */
 input {
   font-size: 1rem;
   padding: 0.25rem;
@@ -139,6 +160,7 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
+/* Container styles */
 .container {
   width: 85%;
   max-width: 1200px;
@@ -146,6 +168,7 @@ input:focus {
   margin-right: auto;
 }
 
+/* Flexbox utility classes */
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -199,11 +222,13 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
+/* Card styles */
 .card {
   width: 25%;
   text-align: center;
 }
 
+/* Error text styles */
 .error-text {
   color: var(--error);
 }
@@ -213,8 +238,6 @@ input:focus {
     width: 100%;
   }
 }
-
-
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
