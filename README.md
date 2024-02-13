@@ -57,3 +57,4 @@ For more details, see [License Details](https://choosealicense.com/licenses/mit/
 Heroku Deployment link (https://mern-shopping-2f0ec0281883.herokuapp.com/)
 
 ## Screenshot
+![Screenshot](./client/public/images/Screenshot.png)

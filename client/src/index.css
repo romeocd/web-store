@@ -115,7 +115,7 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary); /* Set button background color */
-  color: #dfdede;
+  color: #090A0B;
 }
 
 button:hover {
