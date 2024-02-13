@@ -20,8 +20,10 @@ Swift is a cutting-edge e-commerce platform designed to provide a seamless shopp
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Contributors](#contributors)
 * [License](#license)
-* [Screenshots](#screenshots)
+* [Deployment](#deployment)
+* [Screenshot](#screenshot)
 
 ## Installation
 
@@ -51,5 +53,7 @@ npm run develop
 The project is licensed by the MIT License.
 For more details, see [License Details](https://choosealicense.com/licenses/mit/)
 
-## Screenshots
+## Deployment
 Heroku Deployment link (https://mern-shopping-2f0ec0281883.herokuapp.com/)
+
+## Screenshot
