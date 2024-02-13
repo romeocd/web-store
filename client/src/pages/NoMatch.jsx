@@ -1,5 +1,5 @@
 import Jumbotron from "../components/Jumbotron";
-
+// Import Jumbotron component for displaying a large header or banner
 const NoMatch = () => {
   return (
     <div>

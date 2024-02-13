@@ -4,9 +4,10 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 
 function OrderHistory() {
+  // Fetch user data using GraphQL query
   const { data } = useQuery(QUERY_USER);
   let user;
-
+  // If data is available, assign it to `user`
   if (data) {
     user = data.user;
   }

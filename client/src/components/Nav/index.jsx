@@ -1,6 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-
+// Navigation component that renders the site's navigation bar
 function Nav() {
 
   function showNavigation() {
@@ -43,7 +43,7 @@ function Nav() {
   <h1>
     <Link to="/">
       <span role="img" aria-label="shopping bag">
-        <img src="../../public/images/Swift.png" alt="WEBSITELOGO" style={{"width":"100px", "height": "auto"}} />
+        <img src="../../public/images/siteswift.png" alt="WEBSITELOGO" style={{"width":"100px", "height": "auto"}} />
       </span>
     </Link>
   </h1>

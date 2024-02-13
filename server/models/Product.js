@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-
+// Define the schema for the product
 const productSchema = new Schema({
   name: {
     type: String,
@@ -25,12 +25,13 @@ const productSchema = new Schema({
     default: 0
   },
   category: {
+     // References another document's ObjectId
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
   }
 });
-
+// Compiles productSchema into a Model and assigns it to the Product variable
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;

@@ -9,13 +9,15 @@ import { setContext } from '@apollo/client/link/context';
 
 import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
-
+// Create an HTTP link for the Apollo Client that points to the GraphQL server
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
-
+// Set up authentication context for Apollo Client requests
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
+  // Return the headers to the context so httpLink can read them,
+  // including the authorization header if the token exists
   return {
     headers: {
       ...headers,
@@ -23,12 +25,12 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
-
+// Initialize Apollo Client with the authLink and httpLink
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
+// App component serves as the root of the application
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -41,60 +43,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-// import './App.css'
-
-// function App() {
- 
-
-//   return (
-//     <>
-//     <h1>does this work? It does</h1>
-
-//     </>
-//   )
-// }
-
-// export default App
-// If you run only this and comment out the rest 
-// it will show up as does this work? it Does 
-// good starting point?
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
