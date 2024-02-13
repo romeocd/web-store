@@ -40,11 +40,13 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag"><img src="../../public/images/Swift.png" alt="WEBSITELOGO" /></span>
-        </Link>
-      </h1>
+  <h1>
+    <Link to="/">
+      <span role="img" aria-label="shopping bag">
+        <img src="../../public/images/Swift.png" alt="WEBSITELOGO" style={{"width":"100px", "height": "auto"}} />
+      </span>
+    </Link>
+  </h1>
 
       <nav>
         {showNavigation()}
