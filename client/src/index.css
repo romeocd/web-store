@@ -8,7 +8,6 @@
   --error: rgb(228, 46, 1); /* Error color */
   --spacing-one: calc(1rem * 0.5); /* Spacing value 1 */
   --spacing-two: calc(1rem); /* Spacing value 2 */
-  --text-outline-color: #000; /* Outline color for text */
   --text-fill-color: #FFA500; /* Fill color for text (light orange) */
 }
 
