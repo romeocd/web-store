@@ -45,13 +45,13 @@ function Nav() {
   // Render the navigation component
   return (
     <header className="flex-row px-1">
-      <h1>
-        {/* Home link */}
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          Web Store
-        </Link>
-      </h1>
+  <h1>
+    <Link to="/">
+      <span role="img" aria-label="shopping bag">
+        <img src="../../public/images/siteswift.png" alt="WEBSITELOGO" style={{"width":"100px", "height": "auto"}} />
+      </span>
+    </Link>
+  </h1>
 
       {/* Render navigation links */}
       <nav>

@@ -47,6 +47,9 @@ function ProductItem(item) {
         <img
           alt={name}
           src={`/images/${image}`}
+          style={{ transition: '0.3s ease', cursor: 'pointer' }}
+          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
         />
         <p>{name}</p>
       </Link>

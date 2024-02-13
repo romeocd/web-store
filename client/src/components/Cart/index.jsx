@@ -59,8 +59,8 @@ const Cart = () => {
   // Render logic for when the cart is closed
   if (!state.cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
+      <div className="cart-closed" onClick={toggleCart} value="value">
+        <span role="img" aria-label="trash" id="id">
           🛒
         </span>
       </div>
