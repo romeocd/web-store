@@ -48,7 +48,7 @@ function Nav() {
   <h1>
     <Link to="/">
       <span role="img" aria-label="shopping bag">
-        <img src="../../public/images/siteswift.png" alt="WEBSITELOGO" style={{"width":"100px", "height": "auto"}} />
+        <img src="/images/siteswift.png" alt="WEBSITELOGO" style={{width:"100px", height: "auto"}} />
       </span>
     </Link>
   </h1>
